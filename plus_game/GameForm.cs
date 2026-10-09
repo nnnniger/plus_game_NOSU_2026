@@ -48,17 +48,6 @@ namespace plus_game
             return BestStepsCount;
         }
 
-        public int BestStepsCountfunc2(int num)
-        {
-            int ans_num = (num % 2 == 0) ? (num / 2) : (num - 1);
-            int current_num = 2;
-            int BestStepsCount = 2;
-
-            while (current_num != ans_num )
-
-            return BestStepsCount;
-        }
-
 
 
 
