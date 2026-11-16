@@ -33,7 +33,6 @@
             this.pictureMult = new System.Windows.Forms.PictureBox();
             this.buttonThrowOff = new System.Windows.Forms.Button();
             this.buttonRandom = new System.Windows.Forms.Button();
-            this.buttonSetNum = new System.Windows.Forms.Button();
             this.labelStepsCounter = new System.Windows.Forms.Label();
             this.labelCurrentSteps = new System.Windows.Forms.Label();
             this.labelGuessedNum = new System.Windows.Forms.Label();
@@ -44,9 +43,10 @@
             // pictureBoxPlus
             // 
             this.pictureBoxPlus.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPlus.Image")));
-            this.pictureBoxPlus.Location = new System.Drawing.Point(37, 76);
+            this.pictureBoxPlus.Location = new System.Drawing.Point(49, 94);
+            this.pictureBoxPlus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxPlus.Name = "pictureBoxPlus";
-            this.pictureBoxPlus.Size = new System.Drawing.Size(150, 134);
+            this.pictureBoxPlus.Size = new System.Drawing.Size(200, 165);
             this.pictureBoxPlus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPlus.TabIndex = 0;
             this.pictureBoxPlus.TabStop = false;
@@ -55,9 +55,10 @@
             // pictureMult
             // 
             this.pictureMult.Image = ((System.Drawing.Image)(resources.GetObject("pictureMult.Image")));
-            this.pictureMult.Location = new System.Drawing.Point(388, 76);
+            this.pictureMult.Location = new System.Drawing.Point(517, 94);
+            this.pictureMult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureMult.Name = "pictureMult";
-            this.pictureMult.Size = new System.Drawing.Size(149, 134);
+            this.pictureMult.Size = new System.Drawing.Size(199, 165);
             this.pictureMult.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureMult.TabIndex = 1;
             this.pictureMult.TabStop = false;
@@ -65,10 +66,11 @@
             // 
             // buttonThrowOff
             // 
-            this.buttonThrowOff.Font = new System.Drawing.Font("Microsoft Uighur", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThrowOff.Location = new System.Drawing.Point(37, 279);
+            this.buttonThrowOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThrowOff.Location = new System.Drawing.Point(138, 337);
+            this.buttonThrowOff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonThrowOff.Name = "buttonThrowOff";
-            this.buttonThrowOff.Size = new System.Drawing.Size(119, 53);
+            this.buttonThrowOff.Size = new System.Drawing.Size(159, 65);
             this.buttonThrowOff.TabIndex = 2;
             this.buttonThrowOff.Text = "Сбросить";
             this.buttonThrowOff.UseVisualStyleBackColor = true;
@@ -76,33 +78,25 @@
             // 
             // buttonRandom
             // 
-            this.buttonRandom.Font = new System.Drawing.Font("Microsoft Uighur", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRandom.Location = new System.Drawing.Point(223, 279);
+            this.buttonRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRandom.Location = new System.Drawing.Point(473, 337);
+            this.buttonRandom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonRandom.Name = "buttonRandom";
-            this.buttonRandom.Size = new System.Drawing.Size(142, 53);
+            this.buttonRandom.Size = new System.Drawing.Size(189, 65);
             this.buttonRandom.TabIndex = 3;
             this.buttonRandom.Text = "Поменять число на случайное";
             this.buttonRandom.UseVisualStyleBackColor = true;
             this.buttonRandom.Click += new System.EventHandler(this.buttonRandom_Click);
             // 
-            // buttonSetNum
-            // 
-            this.buttonSetNum.Font = new System.Drawing.Font("Microsoft Uighur", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSetNum.Location = new System.Drawing.Point(418, 279);
-            this.buttonSetNum.Name = "buttonSetNum";
-            this.buttonSetNum.Size = new System.Drawing.Size(119, 53);
-            this.buttonSetNum.TabIndex = 4;
-            this.buttonSetNum.Text = "Задать число";
-            this.buttonSetNum.UseVisualStyleBackColor = true;
-            // 
             // labelStepsCounter
             // 
             this.labelStepsCounter.AutoSize = true;
             this.labelStepsCounter.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelStepsCounter.Font = new System.Drawing.Font("Microsoft Uighur", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStepsCounter.Location = new System.Drawing.Point(32, 227);
+            this.labelStepsCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStepsCounter.Location = new System.Drawing.Point(43, 279);
+            this.labelStepsCounter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStepsCounter.Name = "labelStepsCounter";
-            this.labelStepsCounter.Size = new System.Drawing.Size(297, 49);
+            this.labelStepsCounter.Size = new System.Drawing.Size(477, 54);
             this.labelStepsCounter.TabIndex = 5;
             this.labelStepsCounter.Text = "Количество шагов: 0";
             this.labelStepsCounter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,10 +106,11 @@
             // 
             this.labelCurrentSteps.AutoSize = true;
             this.labelCurrentSteps.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelCurrentSteps.Font = new System.Drawing.Font("Microsoft Uighur", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCurrentSteps.Location = new System.Drawing.Point(269, 161);
+            this.labelCurrentSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCurrentSteps.Location = new System.Drawing.Point(359, 198);
+            this.labelCurrentSteps.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCurrentSteps.Name = "labelCurrentSteps";
-            this.labelCurrentSteps.Size = new System.Drawing.Size(33, 49);
+            this.labelCurrentSteps.Size = new System.Drawing.Size(49, 54);
             this.labelCurrentSteps.TabIndex = 6;
             this.labelCurrentSteps.Text = "1";
             this.labelCurrentSteps.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,9 +121,10 @@
             this.labelGuessedNum.AutoSize = true;
             this.labelGuessedNum.BackColor = System.Drawing.Color.Cyan;
             this.labelGuessedNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGuessedNum.Location = new System.Drawing.Point(256, 76);
+            this.labelGuessedNum.Location = new System.Drawing.Point(341, 94);
+            this.labelGuessedNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGuessedNum.Name = "labelGuessedNum";
-            this.labelGuessedNum.Size = new System.Drawing.Size(60, 42);
+            this.labelGuessedNum.Size = new System.Drawing.Size(75, 54);
             this.labelGuessedNum.TabIndex = 7;
             this.labelGuessedNum.Text = "15";
             this.labelGuessedNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,19 +132,19 @@
             // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(819, 420);
+            this.ClientSize = new System.Drawing.Size(1092, 517);
             this.Controls.Add(this.labelGuessedNum);
             this.Controls.Add(this.labelCurrentSteps);
             this.Controls.Add(this.labelStepsCounter);
-            this.Controls.Add(this.buttonSetNum);
             this.Controls.Add(this.buttonRandom);
             this.Controls.Add(this.buttonThrowOff);
             this.Controls.Add(this.pictureMult);
             this.Controls.Add(this.pictureBoxPlus);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GameForm";
             this.Text = "Game_of_not_thrones_because_it_pluse_game";
             this.Load += new System.EventHandler(this.GameForm_Load);
@@ -165,7 +161,6 @@
         private System.Windows.Forms.PictureBox pictureMult;
         private System.Windows.Forms.Button buttonThrowOff;
         private System.Windows.Forms.Button buttonRandom;
-        private System.Windows.Forms.Button buttonSetNum;
         private System.Windows.Forms.Label labelStepsCounter;
         private System.Windows.Forms.Label labelCurrentSteps;
         private System.Windows.Forms.Label labelGuessedNum;

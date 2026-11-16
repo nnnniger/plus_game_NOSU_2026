@@ -27,33 +27,28 @@ namespace plus_game
 
         public int BestStepsCountfunc(int num)
         {
-            int ans_num = num;
+            int count = 0;
 
-            while (ans_num != 1)
+            while (num > 1)
             {
-                if (ans_num % 2 == 0)
-                {
-                    ans_num = ans_num / 2;
-
-                }
+                if (num % 2 == 0)
+                    num /= 2;
                 else
-                {
-                    ans_num = ans_num - 1;
+                    num -= 1;
 
-                }
-
-                BestStepsCount += 1;
-
+                count++;
             }
+            BestStepsCount = count;
+
             return BestStepsCount;
         }
 
 
 
 
+
         private void labelCurrentSteps_Click(object sender, EventArgs e)
         {
-            labelCurrentSteps.Text = BestStepsCountfunc(GuessedNum).ToString();
         }
 
        
@@ -65,15 +60,36 @@ namespace plus_game
 
             UserNum = UserNum + 1;
             labelCurrentSteps.Text = UserNum.ToString();
+
+            BestStepsCount = BestStepsCountfunc(GuessedNum);
+            
             if (UserNum == GuessedNum)
             {
-                MessageBox.Show("ты выйграл :3 маладес");
 
-                UserNum = 1;
-                CurrentSteps = 0;
+                if (CurrentSteps == BestStepsCount)
+                {
+                    MessageBox.Show("ты выйграл :3 маладес");
 
-                labelStepsCounter.Text = "Количество шагов: " + CurrentSteps.ToString();
-                labelCurrentSteps.Text = UserNum.ToString();
+                    UserNum = 1;
+                    CurrentSteps = 0;
+
+                    labelStepsCounter.Text = "Количество шагов: " + CurrentSteps.ToString();
+                    labelCurrentSteps.Text = UserNum.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("ты выйграл, но можно было решить " +
+                        "за меньшее количество шагов! :3 маладес");
+                
+
+                    UserNum = 1;
+                    CurrentSteps = 0;
+
+                    labelStepsCounter.Text = "Количество шагов: " + CurrentSteps.ToString();
+                    labelCurrentSteps.Text = UserNum.ToString();
+                }
+
+                
 
             }
 
@@ -98,18 +114,36 @@ namespace plus_game
             UserNum = UserNum * 2;
             labelCurrentSteps.Text = UserNum.ToString();
 
+            BestStepsCount = BestStepsCountfunc(GuessedNum);
+
             if (UserNum == GuessedNum)
             {
-                MessageBox.Show("ты выйграл :3 маладес");
 
-                UserNum = 1;
-                CurrentSteps = 0;
+                if (CurrentSteps == BestStepsCount)
+                {
+                    MessageBox.Show("ты выйграл :3 маладес");
 
-                labelStepsCounter.Text = "Количество шагов: " + CurrentSteps.ToString();
-                labelCurrentSteps.Text = UserNum.ToString();
+                    UserNum = 1;
+                    CurrentSteps = 0;
 
+                    labelStepsCounter.Text = "Количество шагов: " + CurrentSteps.ToString();
+                    labelCurrentSteps.Text = UserNum.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("ты выйграл, но можно было решить " +
+                        "за меньшее количество шагов! :3 маладес");
+
+
+                    UserNum = 1;
+                    CurrentSteps = 0;
+
+                    labelStepsCounter.Text = "Количество шагов: " + CurrentSteps.ToString();
+                    labelCurrentSteps.Text = UserNum.ToString();
+                }
             }
-                
+
+
 
 
             else if (UserNum > GuessedNum)
@@ -149,11 +183,11 @@ namespace plus_game
 
         private void buttonThrowOff_Click(object sender, EventArgs e)
         {
-            GuessedNum = 15;
+            
             UserNum = 1;
             CurrentSteps = 0;
 
-            labelGuessedNum.Text = GuessedNum.ToString();
+            
             labelStepsCounter.Text = "Количество шагов: " + CurrentSteps.ToString();
             labelCurrentSteps.Text = UserNum.ToString();
 
